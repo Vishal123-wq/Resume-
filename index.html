@@ -1,934 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="e7aa43ca345d7813b1f5607d182baf91.png" type="image/x-icon">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <style>
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    scroll-behavior: smooth;
-    font-family: 'poppins'sans-serif;
-}
-body{
-    color: #ededed;
-    background: #081b29;
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-.header
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: #051129;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-.logo{
-    position: relative;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-
-}
-.navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: #fff;
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;box-sizing: border-box;
+      font-family: 'poppins', sans-serif;
+    }
+    body{
+     
+      color: white;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .logo::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: .4s;
+    }
+   .navbar a {
+    font-size: 18px;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s *var(--i));
-}
-.navbar a:hover{
-    color: #e0ef;
-}
-.home {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
+   }
+   .navbar a:hover,
+   .navbar a.active {
+    color:blue;
+   }
+
+   .home {
     height: 100vh;
-    /* background: url('vishal.jpg') no-repeat; */
+    background:url(su.jpg) no-repeat ;
+   
     background-size: cover;
-    background-position:center ;
+    background-position: ;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
-}
-.home-content{
+    padding: 0 10%;
+   }
+   .home-contant {
     max-width: 600px;
-}
-.home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: .7s ;
-}
-.home-content h3:nth-of-type(2){
-    margin-bottom: 30px;
-    animation: slideTop 1s ease forwards;
-    animation-delay: .7s;
-}
-.home-content h3 span{
-    color: #0ef;
-}
-.home-content h1{
+   }
+   .home-contant h1{
+    position: relative;
     font-size: 56px;
     font-weight: 700;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1s;
-}
-.home-content p {
-    font-size: 20px; 
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
-}
-.home-sci a {
+    line-height: 1.2;
+   }
+   .home-contant h1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: .4s;
+   }
+   .home-contant h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: blueviolet;
+
+   }
+   .home-contant h3::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1.3s;
+   }
+   .home-contant p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+   }
+   .home-contant p::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1.6s;
+   }
+   .home-contant .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 345px;
+    height: 50px;
+   }
+   .home-contant .btn-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: 1.9s;
+      z-index: 2;
+   }
+
+   .btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: slateblue;
+    border: 2px solid steelblue;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+   }
+   .btn-box a:nth-child(2) {
+    background: transparent;
+    color: skyblue;
+   }
+   .btn-box a:nth-child(2):hover{
+    color: black;
+   }
+   .btn-box a:nth-child(2)::before{
+    background-color: skyblue;
+   }
+   .btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:black;
+    z-index: -1;
+   transition: .5s;
+   }
+   .btn-box a:hover::before{
+    width: 100%;
+   }
+   .home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    
+    display: flex;
+    justify-content: space-between;
+
+   }
+   .home-sci::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: 2.5s;
+      z-index: 2;
+   }
+   .home-sci a{
+    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background: transparent;
-    border: 2px solid #0ef;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #0ef;
-    text-decoration: none;
-    transition: .5s ease ;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-    margin: 30px 15px 30px 0 ;
-}
-.home-sci a:hover{
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef
-}
-.btn-box {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef
-}
-.btn-box:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
-}
-
-.about{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 1.5rem;
-}
-.about-img img{
-    padding-bottom: 16%;
-    max-width: 487px;
-    height: 500px;
-    width: 100%;
-    border-radius: 8px;
-}
-.about-text h2 {
-    font-size: 60px;
-
-}
-.about-text h2 span{
-    color: red;
-}
-.about-text h4{
-    font-size: 29px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.7;
-    margin: 15px 0 30px;
-}
-.about-text p {
-    color: aliceblue;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-}
-#services{
-    color: aliceblue;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-}
-.sub-title{
-    text-align: center;
-    font-size: 60px;
-    padding-bottom: 70px;
-}
-.sub-title  span{
-    color: #0ef;
-}
-.container{
-    padding: 90px;
-}
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.services-list div{
     background-color: transparent;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 13px;
-    border-right: 10px;
-    border-radius: 20px;
-    transition: background 0.5s, transform 0.5s;
-    box-shadow: 1px 1px 20px #012290f7,
-      1px 1px 40px #0053b8f7
-}
-.services-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.services-list div a{
-   text-decoration: none; 
-   color:#000000 ;
-   font-size: 12px;
-   margin-top: 20px;
-   display: inline-block;
-}
-.read{
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef
-}
-.read:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
-}
-.services-list div:hover{
-    transform: translateY(-10px);
-}
-.section{
-    display: flex;
-    flex-wrap: wrap;
-}
-.container1{
-    width: 600px;
-    height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
-}
-.heading1{
-    align-items: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness:5px ;
-    margin-bottom: 50px;
-} 
-.bar{
-    font-size: 23px;
-}
-.Technical-bars .bar{
-    margin-top: 40px 0;
-}
-.Technical-bars .bar:first-child{
-    margin-top: 0;
-}
-.Technical-bars .bar:last-child{
-    margin-bottom: 0px;
-}
-.Technical-bars .bar .info{
-    margin-bottom: 5px;
-}
-
-.Technical-bars .bar .info span{
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-} 
-.Technical-bars .bar .progress-line{
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: #000000;
-    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-    transform: scaleX(0);
-    transform-origin:left ;
-}
- @keyframes animate{
-    100%{
-        transform: scaleX(1);
-    }
-} 
- .Technical-bars .bar .progress-line span{
-    height: 100%;
-    background-color: #0ef;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards ;
-    transform: scaleX(0); 
-    transform-origin: left;
-} 
-.progress-line.html span{
-    width: 90%;
-} 
-.progress-line.css span{
-    width: 60%;
-} 
-.progress-line.javascriptl span{
-    width: 85%;
-} 
-.progress-line.python span{
-    width: 50%;
-} 
-.progress-line.react span{
-    width: 90%;
-} 
-
-
-.progress-line span::after{
-    position:absolute ;
-    padding: 1px 8px;
-    background-color: #000;
-    color: #fff;
-     font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: o;
-}
-.progress-line.html span::after{
-    content: "90%";
-}
-.progress-line.css span::after{
-    content: "90%";
-}
-.progress-line.javascript ::after{
-    content: "85%";
-}
-.progress-line.python span::after{
-    content: "90%";
-}
-.progress-line.react span::after{
-    content: "90%";
-}
-.progress-line span::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color:#000 ;
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-  
-@keyframes showText {
-100%{
-    opacity: 1;
-}
-}
-.radial-bars{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.radial-bars .radial-bar{
-    width: 50%;
-    height: 170px;
-    margin-bottom: 10px;
-    position: relative;
-}
-.radial-bars .radial-bar svg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 120px;
-    height: 160px;
-}
-.radial-bars .radial-bar .progress-bar{
-    stroke-width: 10;
-    stop-color: black;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
-}
-
-
-
-.main-text h2{
-    font-size: 60px;
-    line-height: 5;
-    text-align: center;
-}
-.main-text h2 span{
-    color: #0ef;
-}
-.portfolio-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
-}
-.row{
-    position: relative;
-    overflow:hidden ;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.row img{
-    width: 100%;
-    border-radius:8px ;
-    display: block;
-    transition: transform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#0ef);
-    position: absolute;
-    border-radius: 8px;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 40px;
-    transition: height 0.5s;
-}
-.layer h5{
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-.layer p{
-    color: #000;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-.layer i{
-    color: #ff004f;
-    margin-top: 20px;
-    font-size: 20px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 2px solid skyblue;
     border-radius: 50%;
-}
-.row:hover img{
-    transform: scale(1.1);
-}
-.row:hover .layer{
-    height: 100%;
-}
-
-
-.contact{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 3rem;
-    padding-left: 30px;
-    margin-top: 130px;
-}
-.contact-text h2{
-    font-size: 90px;
-    line-height: 1;
-    text-align: center;
-}
-.contact-text h2 span{
-    color: #0ef;
-}
-.contact-text h4{
-    margin: 15px 0;
-    color: rgb(228,228,228);
     font-size: 20px;
-    font-family: 600;
-}
-.contact-text p {
-    color: (177,177,177);
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 2rem;
-}
-.contact-list{
-    margin-bottom: 3rem;
-}
-.contact-list li{
-    margin-bottom: 10px;
-    display: block;
-}
-.contact-list li{
-    margin-bottom: 10px;
-    display: block;
-}
-
-.contact-list i {
-    display: inline-block;
-    color: #0ef;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all .40s ease;
-}
-.contact-list li a:hover{
-    transform: scale(1.01) translateY(-5px);
-    color: #0ef;
-}
-.contact-icons i{
-   display: inline-block;
-   justify-content: center;
-   align-items: center;
-   width: 40px;
-   height: 40px;
-   background: transparent;
-   border: 2px solid #0ef;
-   border-radius: 50%;
-   font-size: 35px;
-   color: #0ef;
-   text-decoration: none;
-   margin: 30px 15px 30px 0;
-   transition: .5s ease;
-   opacity: 0;
-   animation: slideLeft 1s ease forwards;
-   animation-delay:calc(.2s *var(--i)) ;
-}
-.contact-icons i:hover{
-    background: #0ef;
-    color: #000;
-    box-shadow: 0 0 20px #0ef;
-}
-
-.contact-form form{
-    position: relative;
-}
-.contact-form form input,form textarea{
-    border: none;
-    outline: none;
-    width: 90%;
-    padding: 18px;
-    background: #555557;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-}
-.contact-form textarea{
-    resize: none;
-    height: 220px;
-}
-.contact-form form .send{
-    display: inline-block;
-    padding: 14px 60px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 18px;
-    color: #081b29;
-    letter-spacing: 1px;
+    color: skyblue;
     text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef
-}
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+   }
 
-.contact-form form .send:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
-}
+    .home-sci a:hover {
+      color:#081b29;
 
-
-
-
-
-
-
-
-
-
-
-
-@keyframes slideRight{
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
     }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-@keyframes slideLeft{
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
-@keyframes slideTop{
-    0%{
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-@keyframes slideBottom{
-    0%{
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
 
-.last-text p{
+   
+   .home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0;
+    height: 100%;
+    background: skyblue;
+    z-index: -1;
+    transition: .5s;
+
+   }
+   .home-sci a:hover::before{
     width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: rgb(7,85,91);
-    font-weight: 300;
-    margin-top: 70px;
+   }
+   .home-imgHover {
+    position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 606px;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+   }
+   .home-imgHover:hover {
+    background: black;
+    opacity: .7 ;
 
-}
-.top{
-    position: fixed;
-    bottom: 2.1rem;
-    right: 2,1rem;
-}
-.top i {
-    color: #000;
-    background: #0ef;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 0.5rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </style>
+   }
+   .home-imgHover::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      animation: showRight 1s ease forwards;
+      animation-delay: 3s;
+      z-index: 2;
+   }
+   @keyframes showRight {
+    100% {
+      width: 0;
+      }
+   }
+  </style>
 </head>
 <body>
   
-        <header class="header">
-        <a href="#" class="logo">Portfolio</a>
 
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#skills" style="--i:3">Skill</a>
-            <a href="#services" style="--i:4">Portfolio</a>
-            <a href="#contact" style="--i:5">Contact</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Vishal Deshmukh</h1>
-            <h3>Hey <span class="text"></span></h3>
-            <p>I Am a Web Desiner With Extensive Experience For Over 0 Years.
-                <br>Expertise Is To Create And Website Desing , Frontend Desing, And
-            </p>
-            <div class="home-sci">
-                <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-instagram'></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#" style="--i:10"><i class='bx bxl-tiktok'></i></a>
-            </div>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-        <span class="home-imgHover"></span>
-    </section>
+  <header class="header">
+    <a href="#" class="logo">virat</a>
 
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="WhatsApp Image 2024-08-02 at 21.09.47_9a29acb3.jpg" alt="">
-        </div>
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>Full Stack Developer</h4>
-            <p>  I'm Vishal Deshmukh, a dedicated full-stack web developer passionate about creating comprehensive digital solutions. With expertise in both front-end and back-end technologies, I specialize in building scalable web applications that blend intuitive user interfaces with robust server-side architecture.
+    <nav class="navbar">
+      <a href="#"class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+      </nav>
+  </header>
 
-                On the front-end, I'm proficient in HTML5, CSS3, and JavaScript, utilizing frameworks like React.js and Angular to deliver engaging user experiences. In the back-end, I excel in Node.js for server-side logic, Python with Django and Flask frameworks for versatile applications, and PHP for dynamic server scripting.
-                </p>
-         <a href="#" class="btn-box">More About Me</a>
-
-        </div>
-    </section>
-
-    <section>
-        <div class="services" id="services">
-            <div class="container">
-                <h1 class="sub-title">My <span>Services</span></h1>
-                <div class="services-list">
-                 <div>
-                    <i class="bx bx-code" style="color: #00eeff"></i>
-                    <h2>UI/UX Desing</h2>
-                    <p>I have a strong background in UI/UX design principles and practices,
-                         enhancing user satisfaction and usability through intuitive interfaces and
-                          seamless interactions. My skills in this area include:.</p>
-                     <a href="#" class="read">lern more</a>
-                </div>
-                 <div>
-                    <i class="bx bx-crop" style="color: #00eeff"></i>
-                    <h2>Front-end Development</h2>
-                    <p>Proficient in HTML5, CSS3 for responsive designs, JavaScript for interactive functionalities,
-                         and experienced in frameworks like React.js and Angular for building dynamic web applications.</p>
-                     <a href="#" class="read">lern more</a>
-                </div>
-                 <div>
-                    <i class="bx bxl-apple" style="color: #00eeff"></i>
-                    <h2>Back-end Development</h2>
-                    <p>Experienced in Node.js for scalable applications, Python for scripting and Django/Flask frameworks, 
-                        and PHP for dynamic server-side scripting and database management..</p>
-                     <a href="#" class="read">lern more</a>
-                </div>
-               
-              </div>
-            </div>
-        </div>
-    </section>
-  <h1 class="sub-title">My <span>Skills</span></h1>
-
-   <section>
-    <div class="container1" id="skills">
-        <h1 class="heading1">Technical Skills</h1>
-        <div class="Technical-bars">
-          <div class="bar"><i style="color: #c95d2e" class="bx bxl-html5"></i>
-            <div class="info">
-                <span>HTML</span>
-            </div>
-            <div class="progress-line html">
-                <span></span>
-            </div>
-          </div>  
-          <div class="bar"><i  style="color: #147bbc" class="bx bxl-css3"></i>
-            <div class="info">
-                <span>css</span>
-            </div>
-            <div class="progress-line css">
-                <span></span>
-            </div>
-          </div>  
-          <div class="bar"><i  style="color: #b0bc1e" class="bx bxl-javascript"></i>
-            <div class="info">
-                <span>javascript</span>
-            </div>
-            <div class="progress-line javascript">
-                <span></span>
-            </div>
-          </div>  
-          <div class="bar"><i style="color: #c32ec9" class="bx bxl-python"></i>
-            <div class="info">
-                <span>python</span>
-            </div>
-            <div class="progress-line python">
-                <span></span>
-            </div>
-          </div>  
-          <div class="bar"><i style="color: #69bcbc" class="bx bxl-react"></i>
-            <div class="info">
-                <span>react</span>
-            </div>
-            <div class="progress-line react">
-                <span></span>
-            </div>
-          </div>  
-        </div>
+  <section class="home">
+    <div class="home-contant">
+      <h1> Hi, I Am Vishal Deshmukh</h1>
+      <h3>Indian Cricketer</h3>
+      <p>  "Evrything you've Ever Wanted Is Sitting On The Other Side Of Featr" ----------
+    "Evrything you've Ever Wanted Is Sitting On The Other Side Of Featr" ----------
+      "Evrything you've Ever Wanted Is Sitting On The Other Side Of Featr" ----------
+      "Evrything you've Ever Wanted Is Sitting On The Other Side Of Featr" ----------
+      "Evrything you've Ever Wanted Is Sitting On The Other Side Of Featr" ----------
+      "Evrything you've Ever Wanted Is Sitting On The Other Side Of Featr" ----------
+       
+      </p>
+           <div class="btn-box">
+            <a href="#">Hire Me</a>
+            <a href="#">Let,s Talk</a>
+           </div>
     </div>
-</section>
-<section>
-    <div id="portfolio" id="project">
-        <div class="main-text" id="project">
-            <h2>Letest <span>Project</span></h2>
+   <div class="home-sci">
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
 
-            <div class="porfolio-content">
-                <div class="row">
-                     <img src="photo-1488590528505-98d2b5aba04b.avif">
-                     <div class="layer">
-                        <h5>UI/UX Desing</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis provident accusamus temporibus s
-                             esse repudiandae quae distinctio neque accusamus, saepe odit!</p>
-                             <a href="#"><i class="bx bx-link-external" style="color: black;"></i></a>
-                     </div>
-                </div>
-                <div class="row">
-                    <img src="photo-1691435828932-911a7801adfb.avif">
-                    <div class="layer">
-                       <h5>UI/UX Desing</h5>
-                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis provident accusamus temporibus s
-                            esse repudiandae quae distinctio neque accusamus, saepe odit!</p>
-                            <a href="#"><i class="bx bx-link-external" style="color: black;"></i></a>
-                    </div>
-               </div>
-               <div class="row">
-                <img src="web.1.jpg">
-                <div class="layer">
-                   <h5>UI/UX Desing</h5>
-                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis provident accusamus temporibus s
-                        esse repudiandae quae distinctio neque accusamus, saepe odit!</p>
-                        <a href="#"><i class="bx bx-up-arrow-alt" style="color: rgb(35, 41, 46);"></i></a>
-                </div>
-             </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="contact-text">
-        <h2>Contact <span>Me</span></h2>
-        <h4>Let' work Together</h4>
-        <p>Let's work together to achieve your goals. What specific 
-            project or task would you like to collaborate on?</p>
-          <div class="contact-list">
-            <li><i class="bx bxs-send"></i>contact@gmail.com</li>
-            <li><i class="bx bxs-phone"></i>7972628672</li>
-          </div>   
-          <div class="contact-icons">
-            <a href=""><i class="bx bxl-facebook-circle"></i></a>
-            <a href=""><i class="bx bxl-twitter"></i></a>
-            <a href=""><i class="bx bxl-instagram"></i></a>
-            <a href=""><i class="bx bxl-linkedin"></i></a>
-            
-          </div>
-
-    </div>
-
-    <div class="contact-form">
-        <form action="">
-            <input type="" placeholder="Enter Your Name" required>
-            <input type="email" placeholder="Enter Your Email" required>
-
-            <input type="" placeholder="Enter Your Subject">
-            <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Massege" required></textarea>
-            <input type="submit" value="submit" class="send">
-        </form>
-    </div>
-</section>
-<div class="last-text">
-    <p>Developer With Love By vishal Deshmukh @ 2024</p>
-</div>
-<a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
-<script>
-    let typed = new Typed(".text",{
-    Strings: ["vishal" , "YouTuber", "Web Developer"],
-    typeSpeed: 100,
-    backSpeed: 10,
-    backDelay: 100,
-    loop: true
-});
-
-
-
-
-</script>
+   </div>
+   <span class="home-imgHover"></span>
+  </section>
 
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>   
